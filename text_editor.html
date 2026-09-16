@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1{
+        justify-self: center;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    textarea{
+        width:1500px;
+        height: 400px;
+    }
+    button{
+        background-color:cornflowerblue;
+        color: white;
+        text-align: center;
+        height: 80px;
+        width: 100px;
+    }
+    #container{
+        height: 100px;
+        display: flex;
+        gap: 50px;
+        margin-left: 100px;
+    }
+  </style>
+    <title>Document</title>
+</head>
+<body>
+    
+        
+    <h1>TEXT EDITOR</h1>
+
+    <div id="container">
+    <button id="bold" onclick="option1()">BOLD</button>
+    <button id="italic" onclick="option2()">ITALIC</button>
+    <button id="left" onclick="option3()">JUS-LEFT</button>
+    <button id="center" onclick="option4()">JUS-CENTER</button>
+    <button id="right" onclick="option5()">JUS-RIGHT</button>
+    <button id="small" onclick="option6()">UPPERCASE</button>
+    <button id="big" onclick="option7()">LOWERCASE</button>
+    <button id="capitalize" onclick="option8()">CAPITALIZE</button>
+    <button id="clear" onclick="option9()">CLEAR</button>
+    </div>
+
+    <textarea id="text"></textarea>
+
+    <script>
+        function option1(){
+            document.getElementById("text").style.fontWeight = "bold";
+        }
+        function option2(){
+            document.getElementById("text").style.fontStyle = "italic";
+        }
+        function option3(){
+            document.getElementById("text").style.textAlign = "left";
+        }
+        function option4(){
+            document.getElementById("text").style.textAlign = "center";
+        }
+        function option5(){
+            document.getElementById("text").style.textAlign = "right";
+        }
+        function option6(){
+            document.getElementById("text").style.textTransform = "uppercase";
+        }
+        function option7(){
+            document.getElementById("text").style.textTransform = "lowercase";
+        }
+        function option8(){
+            document.getElementById("text").style.textTransform = "capitalize";
+        }
+        function option9(){
+            document.getElementById("text").value = "";
+        }
+    </script>
+</body>
+</html>
